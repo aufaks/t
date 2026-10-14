@@ -40,13 +40,15 @@ class Balloon:
     def __init__(self):
         self.x, self.y = random.randint(100,700), 90
         self.speed = random.randint(3,7)
+        self.dy = 1
         self.size = random.randint(30,50)
         self.image = load_image('ball41x41.png')
     def update(self):
+        self.y += self.speed * self.dy
         if self.y > 550:
-            self.y -= self.speed
+            self.dy = -1
         else:
-            self.y += self.speed
+            self.dy = 1
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y, self.size, self.size)
 
