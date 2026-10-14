@@ -47,7 +47,7 @@ class Balloon:
         self.y += self.speed * self.dy
         if self.y > 550:
             self.dy = -1
-        else:
+        if self.dy == -1 and self.y < 450:
             self.dy = 1
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y, self.size, self.size)
