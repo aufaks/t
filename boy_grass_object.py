@@ -38,7 +38,7 @@ class Zombie:
 
 class Balloon:
     def __init__(self):
-        self.x, self.y = random.randint(100,700), 90
+        self.x, self.y = random.randint(50,750), 75
         self.speed = random.randint(3,10)
         self.dy = 1
         self.size = random.randint(20,60)
